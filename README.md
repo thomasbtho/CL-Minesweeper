@@ -38,14 +38,14 @@ CL-Minesweeper is a command-line implementation of the classic Minesweeper game.
 
 ### Compilation and Execution
 
-Clone the repository and run the following commands:
+Clone the repository and run the following command:
 
 ```sh
-# Build the project
-./gradlew build
+# On MacOS and Linux
+./gradlew run --console=plain
 
-# Run the game
-./gradlew run
+# On Windows
+gradlew run --console=plain
 ```
 
 ---

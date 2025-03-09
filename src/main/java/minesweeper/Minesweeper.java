@@ -84,6 +84,8 @@ public class Minesweeper implements Runnable {
                 System.out.println("You won!");
                 break;
         }
+
+        scanner.close();
     }
 
     private void mark(int y, int x) {
