@@ -1,44 +1,30 @@
-# CL-Minesweeper
+# 🏴‍☠️ Command-Line Minesweeper
 
-CL-Minesweeper is a command-line implementation of the classic Minesweeper game.
+A classic **Minesweeper** game playable directly in the **command line**, built in **Java 21**.
 
-## Features
+## 🎯 Features
 
-- Fixed **9x9** game board
-- Customizable number of mines at the start
-- Two possible actions: mark a cell (mine) or explore a cell (free)
-- Automatic exploration of adjacent empty cells using a **flood fill** algorithm
-- Updated board display after each action
+✔ Classic Minesweeper mechanics (flagging, revealing cells, checking for mines)  
+✔ Randomly generated minefield with adjustable grid size and mine count  
+✔ Fully interactive CLI with simple text input  
+✔ Clear and aligned board display for better readability  
+✔ Win and loss detection
 
-## Game Rules
+## 🛠 Installation & Setup
 
-1. The game first asks how many mines should be placed on the board.
-2. The player can then enter commands in the following format:
-   ```
-   x y cmd
-   ```
-   Where:
-    - `x` is the column coordinate
-    - `y` is the row coordinate
-    - `cmd` is either `mine` or `free`
+### 1️⃣ Prerequisites
 
-### Available Commands
+- **Java 21** (or later) installed
+- A terminal supporting standard input/output
 
-- `mine`: Marks or unmarks a cell suspected of containing a mine.
-- `free`: Explores a cell. Three possible outcomes:
-    - If the cell contains a mine, all mines are revealed and the game is over.
-    - If the cell contains a number, it is revealed.
-    - If the cell is empty, all adjacent empty cells are explored recursively.
+### 2️⃣ Clone the Repository
 
-## Installation and Execution
+```sh
+git clone https://github.com/thomasbtho/CL-Minesweeper.git
+cd CL-Minesweeper
+```
 
-### Prerequisites
-
-- Java 8 or higher
-
-### Compilation and Execution
-
-Clone the repository and run the following command:
+### 3️⃣ Run the Game
 
 ```sh
 # On MacOS and Linux
@@ -48,7 +34,24 @@ Clone the repository and run the following command:
 gradlew run --console=plain
 ```
 
+## 🎮 How to Play
+
+1️⃣ Enter **three values**: `x y action`
+
+- `x` and `y` are the **coordinates** (starting from 1).
+- `action` can be:
+    - `free` → Uncover the cell
+    - `flag` → Mark a possible mine
+
+2️⃣ Example input:
+
+```sh
+3 5 free
+```
+
+3️⃣ **Win condition**: Reveal all non-mine cells.  
+4️⃣ **Lose condition**: Reveal a mine.
+
 ---
-
-🚀 Have fun playing **CL-Minesweeper**!
-
+**Author:** [thomasbtho](https://github.com/thomasbtho)  
+🎮 Happy mining! 🏴‍☠️
